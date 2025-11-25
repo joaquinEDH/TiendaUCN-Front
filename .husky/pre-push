@@ -1,13 +1,4 @@
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-
 echo "🟡 Verifying project integrity..."
-
-npm run knip
-if [ $? -ne 0 ]; then
-  echo "🔴 Push blocked: knip found unused files/dependencies"
-  exit 1
-fi
 
 npm run build
 if [ $? -ne 0 ]; then

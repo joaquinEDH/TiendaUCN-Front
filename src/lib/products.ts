@@ -26,7 +26,3 @@ export const products: Product[] = [
     imageUrl: "/generic.png",
   },
 ];
-
-export function getProductById(id: number) {
-  return products.find((p) => p.id === id);
-}
