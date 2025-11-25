@@ -1,0 +1,9 @@
+echo "🟡 Verifying project integrity..."
+
+npm run build
+if [ $? -ne 0 ]; then
+  echo "🔴 Push blocked: Build failed"
+  exit 1
+fi
+
+echo "🟢 All checks passed. Proceeding with push"
